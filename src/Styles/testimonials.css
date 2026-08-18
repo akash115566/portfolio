@@ -1,0 +1,330 @@
+/* =========================================
+   TESTIMONIAL SECTION
+========================================= */
+
+.testimonials-section {
+  width: 100%;
+  padding: 70px 30px 60px;
+
+  background: #f3e9d6;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.testimonials-heading {
+  margin: 0 0 45px;
+
+  font-size: 40px;
+  font-weight: 400;
+
+  color: #111;
+}
+
+
+/* =========================================
+   SLIDER
+========================================= */
+
+.testimonial-slider {
+  position: relative;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   IMAGES
+========================================= */
+
+.testimonial-images {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+/* Image Box */
+
+.testimonial-image-box {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s ease;
+}
+
+
+/* Images */
+
+.testimonial-image-box img {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 20px;
+
+  object-fit: cover;
+
+  display: block;
+
+  opacity: 0.65;
+
+  transition:
+    width 0.5s ease,
+    height 0.5s ease,
+    opacity 0.5s ease,
+    border-radius 0.5s ease;
+}
+
+
+/* =========================================
+   CENTER IMAGE
+========================================= */
+
+.testimonial-image-box.active img {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 28px;
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.testimonial-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111;
+
+  font-size: 35px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: all 0.3s ease;
+}
+
+
+.testimonial-arrow:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+
+.left-arrow {
+  left: -35px;
+}
+
+
+.right-arrow {
+  right: -35px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.testimonial-content {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 45px auto 0;
+}
+
+
+/* Stars */
+
+.testimonial-stars {
+  margin-bottom: 20px;
+}
+
+.testimonial-stars span {
+  color: #16819a;
+
+  font-size: 18px;
+
+  margin: 0 2px;
+}
+
+
+/* Text */
+
+.testimonial-text {
+  margin: 0;
+
+  font-size: 18px;
+
+  line-height: 1.55;
+
+  color: #333;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .testimonials-section {
+    padding: 55px 20px;
+  }
+
+  .testimonials-heading {
+    font-size: 34px;
+  }
+
+  .testimonial-images {
+    gap: 12px;
+  }
+
+  .testimonial-image-box img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .testimonial-image-box.active img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .left-arrow {
+    left: -15px;
+  }
+
+  .right-arrow {
+    right: -15px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .testimonials-section {
+    padding: 45px 15px;
+  }
+
+  .testimonials-heading {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .testimonial-images {
+    gap: 8px;
+  }
+
+  /* Mobile par 7 images */
+  .testimonial-image-box img {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+  }
+
+  .testimonial-image-box.active img {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 18px;
+  }
+
+  .left-arrow {
+    left: -8px;
+  }
+
+  .right-arrow {
+    right: -8px;
+  }
+
+  .testimonial-arrow {
+    font-size: 28px;
+  }
+
+  .testimonial-content {
+    margin-top: 35px;
+  }
+
+  .testimonial-stars span {
+    font-size: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .testimonial-images {
+    gap: 4px;
+  }
+
+  .testimonial-image-box img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .testimonial-image-box.active img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .testimonial-text {
+    font-size: 13px;
+  }
+}

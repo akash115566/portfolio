@@ -1,0 +1,333 @@
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+    margin: 0;
+}
+
+.navbar {
+  width: 100%;
+  background: #f3e9d6;
+  color: #111;
+}
+
+/* =========================
+   TOP SLIDER
+========================= */
+
+.top-slider {
+  height: 33px;
+  width: 100%;
+  background: #278495;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  color: #fff;
+}
+
+.slider-text {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+.slider-arrow {
+  position: absolute;
+
+  border: none;
+  background: transparent;
+  color: #fff;
+
+  font-size: 27px;
+  font-weight: 200;
+
+  cursor: pointer;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  opacity: 0.75;
+
+  transition: 0.2s ease;
+}
+
+.slider-arrow:hover {
+  opacity: 1;
+}
+
+.left-arrow {
+  left: 55px;
+}
+
+.right-arrow {
+  right: 55px;
+}
+
+/* =========================
+   MAIN NAVBAR
+========================= */
+
+.navbar-main {
+  height: 115px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  padding: 0 50px;
+}
+
+/* Left */
+
+.navbar-left {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Center */
+
+.navbar-logo {
+  width: 33.33%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 92px;
+  height: 92px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* Right */
+
+.navbar-right {
+  width: 33.33%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 28px;
+}
+
+/* Icons */
+
+.icon-link {
+  color: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition: transform 0.2s ease;
+}
+
+.icon-link:hover {
+  transform: scale(1.08);
+}
+
+/* =========================
+   MENU
+========================= */
+
+.navbar-menu {
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 45px;
+}
+
+.navbar-menu a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #111;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  padding: 7px 0;
+
+  transition: 0.3s ease;
+}
+
+.navbar-menu a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: #111;
+
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar-main {
+    padding: 0 30px;
+  }
+
+  .navbar-menu {
+    gap: 25px;
+  }
+
+  .navbar-menu a {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .left-arrow {
+    left: 25px;
+  }
+
+  .right-arrow {
+    right: 25px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .top-slider {
+    height: 35px;
+  }
+
+  .slider-text {
+    font-size: 10px;
+  }
+
+  .slider-arrow {
+    font-size: 22px;
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+
+  .navbar-main {
+    height: 95px;
+    padding: 0 18px;
+  }
+
+  .navbar-logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .navbar-right svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .navbar-left svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .navbar-menu {
+    height: auto;
+
+    padding: 12px 15px 18px;
+
+    gap: 20px;
+
+    overflow-x: auto;
+    justify-content: flex-start;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+  }
+
+  .navbar-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar-menu a {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    flex-shrink: 0;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .navbar-main {
+    padding: 0 12px;
+  }
+
+  .navbar-logo img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .navbar-menu {
+    gap: 16px;
+  }
+}

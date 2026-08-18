@@ -1,0 +1,236 @@
+/* =========================================
+   MAIN BACKGROUND IMAGE SECTION
+========================================= */
+
+.about-section {
+  position: relative;
+
+  width: 100%;
+  height: 650px;
+
+  background-image: url("/Home/backimg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   RIGHT SIDE HOVER BOX
+========================================= */
+
+.about-hover-box {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 50%;
+  height: 100%;
+
+  background: rgba(243, 233, 214, 0.96);
+
+  transform: translateX(100%);
+
+  transition: transform 0.7s ease;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.about-section:hover .about-hover-box {
+  transform: translateX(0);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.about-content {
+  width: 100%;
+
+  padding: 50px 60px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PARAGRAPH
+========================================= */
+
+.about-content p {
+  margin: 0 0 18px;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: #222;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.about-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 12px;
+
+  min-width: 170px;
+  height: 48px;
+
+  padding: 0 25px;
+
+  background: #c74743;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  transition: all 0.3s ease;
+}
+
+
+.about-button:hover {
+  background: #111;
+
+  color: #fff;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .about-section {
+    height: 600px;
+  }
+
+  .about-content {
+    padding: 40px 45px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 14px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .about-section {
+    height: 650px;
+  }
+
+  .about-hover-box {
+    width: 60%;
+  }
+
+  .about-content {
+    padding: 35px 30px;
+  }
+
+  .about-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .about-section {
+    height: 700px;
+
+    background-position: center;
+  }
+
+  /* Mobile par content visible rahega */
+  .about-hover-box {
+    width: 100%;
+
+    transform: translateX(0);
+
+    background: rgba(243, 233, 214, 0.94);
+  }
+
+  .about-content {
+    padding: 35px 22px;
+  }
+
+  .about-content p {
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 14px;
+  }
+
+  .about-button {
+    min-width: 150px;
+
+    height: 45px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .about-section {
+    height: 750px;
+  }
+
+  .about-content {
+    padding: 30px 18px;
+  }
+
+  .about-content p {
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+}

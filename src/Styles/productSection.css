@@ -1,0 +1,394 @@
+/* =========================================
+   PRODUCT SECTION
+========================================= */
+
+.product-section {
+  width: 100%;
+  padding: 65px 25px 55px;
+
+  background: #f3e9d6;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.product-section-heading {
+  text-align: center;
+
+  margin: 0 0 45px;
+
+  font-size: 38px;
+  font-weight: 400;
+
+  color: #111;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.products-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+  width: 100%;
+
+  min-width: 0;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image-wrapper {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 0.88;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  background: #eee;
+}
+
+
+.product-image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: opacity 0.45s ease,
+              transform 0.45s ease;
+}
+
+
+/* Main Image */
+
+.main-image {
+  opacity: 1;
+}
+
+
+/* Hover Image */
+
+.hover-image {
+  opacity: 0;
+}
+
+
+/* Hover */
+
+.product-image-wrapper:hover .main-image {
+  opacity: 0;
+}
+
+.product-image-wrapper:hover .hover-image {
+  opacity: 1;
+}
+
+
+/* =========================================
+   PRODUCT INFO
+========================================= */
+
+.product-info {
+  padding-top: 15px;
+}
+
+
+/* Category */
+
+.product-category {
+  margin: 0 0 8px;
+
+  font-size: 10px;
+
+  color: #777;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* Product Name */
+
+.product-name {
+  margin: 0 0 8px;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  color: #222;
+}
+
+
+/* Price */
+
+.product-price {
+  margin: 0 0 10px;
+
+  font-size: 14px;
+
+  color: #222;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.product-rating {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2px;
+
+  margin-bottom: 12px;
+}
+
+
+.star {
+  font-size: 14px;
+
+  color: #c9c1b5;
+}
+
+
+.star.active {
+  color: #21869a;
+}
+
+
+/* =========================================
+   ADD TO CART
+========================================= */
+
+.add-cart-link {
+  display: inline-block;
+
+  color: #111;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #111;
+
+  padding-bottom: 3px;
+
+  opacity: 0;
+
+  transform: translateY(5px);
+
+  transition: all 0.3s ease;
+}
+
+
+/* Show Add Cart on Hover */
+
+.product-card:hover .add-cart-link {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   SHOP ALL
+========================================= */
+
+.shop-all-wrapper {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 55px;
+}
+
+
+.shop-all-btn {
+  width: 240px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #c74743;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  transition: all 0.3s ease;
+}
+
+
+.shop-all-btn:hover {
+  background: #111;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px 20px;
+  }
+
+  .product-section-heading {
+    font-size: 34px;
+  }
+
+  .add-cart-link {
+    opacity: 1;
+
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .product-section {
+    padding: 45px 15px;
+  }
+
+  .product-section-heading {
+    font-size: 28px;
+
+    margin-bottom: 30px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px 12px;
+  }
+
+  .product-info {
+    padding-top: 10px;
+  }
+
+  .product-category {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+  }
+
+  .product-name {
+    font-size: 15px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+
+  .star {
+    font-size: 12px;
+  }
+
+  .add-cart-link {
+    font-size: 9px;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+  .shop-all-wrapper {
+    margin-top: 40px;
+  }
+
+  .shop-all-btn {
+    width: 200px;
+    height: 45px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .products-grid {
+    gap: 25px 10px;
+  }
+
+  .product-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .product-name {
+    font-size: 14px;
+  }
+
+  .product-category {
+    font-size: 7px;
+  }
+
+  .product-price {
+    font-size: 12px;
+  }
+}
