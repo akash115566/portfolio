@@ -9,40 +9,39 @@ const AboutSection = () => {
       {/* Right Side Content */}
       <div className="about-hover-box">
 
-        <div className="about-content">
+       <div className="about-content">
 
-          <p>
-            Our parent company, Laxmi Enterprises. Since then, we've become a
-            premium global supplier, bringing the essence of India to various
-            corners of the world.
-          </p>
+  <p>
+    MSME Business Care is a growth-focused business ecosystem dedicated to
+    supporting Micro, Small and Medium Enterprises, startups, entrepreneurs
+    and emerging businesses across India.
+  </p>
 
-          <p>
-            Transparency and authenticity have been the pillars of our
-            existence for generations. With our deep knowledge and expertise
-            in growing, procuring, and providing the highest quality spices,
-            we take pride in sharing our passion with the world.
-          </p>
+  <p>
+    We work as a bridge between government initiatives, business opportunities
+    and entrepreneurs by helping businesses understand and access the right
+    schemes, resources, markets and growth opportunities.
+  </p>
 
-          <p>
-            Each step of our production process, from sourcing the finest
-            ingredients to the careful packaging, is meticulously executed to
-            deliver products of unparalleled excellence. When it comes to
-            quality, our state of the art procedures ensure there has been
-            absolutely no compromise.
-          </p>
+  <p>
+    From business branding and marketing to government scheme support, dealer
+    and distributor network development, franchise opportunities, investment
+    connect and market expansion, MSME Business Care provides practical
+    solutions designed to help businesses grow with confidence.
+  </p>
 
-          <p>
-            It is from this heritage and legacy, that The Great Indian Spicery
-            was born.
-          </p>
+  <p>
+    Our vision is to create a strong and connected MSME ecosystem where
+    entrepreneurs can discover opportunities, build stronger brands and take
+    their businesses towards sustainable growth.
+  </p>
 
-          {/* Button */}
-          <Link to="/about" className="about-button">
-            KNOW MORE
-          </Link>
+  {/* Button */}
+  <Link to="/about" className="about-button">
+    KNOW MORE
+  </Link>
 
-        </div>
+</div>
 
       </div>
 

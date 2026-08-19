@@ -4,15 +4,15 @@ import "../Styles/heroSlider.css";
 
 const slides = [
   {
-    image: "/Home/slide1.webp",
+    image: "/Home/top-slider1.jpeg",
     link: "/shop",
   },
   {
-    image: "/Home/slide2.webp",
+    image: "/Home/top-slider2.jpeg",
     link: "/shop",
   },
   {
-    image: "/Home/slide3.webp",
+    image: "/Home/top-slider3.jfif",
     link: "/shop",
   },
 ];
@@ -52,9 +52,9 @@ const HeroSlider = () => {
             />
 
             {/* Shop Now */}
-            <Link to={slide.link} className="shop-now-btn">
+            {/* <Link to={slide.link} className="shop-now-btn">
               SHOP NOW
-            </Link>
+            </Link> */}
           </div>
         ))}
       </div>

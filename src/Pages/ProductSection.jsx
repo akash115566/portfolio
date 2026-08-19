@@ -3,38 +3,39 @@ import { Link } from "react-router-dom";
 import "../Styles/productSection.css";
 
 const products = [
-  {
-    image: "/Home/gram-masala.webp",
-    hoverImage: "/Home/gram1.webp",
-    category: "THE GREAT INDIAN SPICERY",
-    name: "Garam Masala",
-    price: "Rs. 260.00",
+    {
+    image: "/Home/team/team4.jfif",
+    hoverImage: "/Home/chaat1.webp",
+    category: "Business Lawyer Founder Business Care",
+    name: "Ms Pooja Sharma L.L.B",
+    // price: "Rs. 235.00",
     rating: 5,
   },
   {
-    image: "/Home/sambhar-masala.webp",
+    image: "/Home/team/team5.jfif",
+    hoverImage: "/Home/turmeric1.webp",
+    category: "Co-Founder - Business Care",
+    name: "Mr. Ankur Bansal",
+    // price: "Rs. 230.00",
+    rating: 5,
+  },
+  {
+    image: "/Home/team/team2.jfif",
+    hoverImage: "/Home/gram1.webp",
+    category: "EX- I.A.S(Retd) C.E.O Business Care",
+    name: "Mr. Jyoti Kalash",
+    // price: "Rs. 260.00",
+    rating: 5,
+  },
+  {
+    image: "/Home/team/team3.webp",
     hoverImage: "/Home/sambhar1.webp",
-    category: "THE GREAT INDIAN SPICERY",
-    name: "Sambhar Masala",
-    price: "Rs. 215.00",
+    category: "Legal Advisor - Business Care",
+    name: "Mr. Dhanjay Mishra",
+    // price: "Rs. 215.00",
     rating: 3,
   },
-  {
-    image: "/Home/chaat-masala.webp",
-    hoverImage: "/Home/chaat1.webp",
-    category: "THE GREAT INDIAN SPICERY",
-    name: "Chaat Masala",
-    price: "Rs. 235.00",
-    rating: 5,
-  },
-  {
-    image: "/Home/turmeric-powder.webp",
-    hoverImage: "/Home/turmeric1.webp",
-    category: "THE GREAT INDIAN SPICERY",
-    name: "Turmeric Powder",
-    price: "Rs. 230.00",
-    rating: 5,
-  },
+
 ];
 
 const ProductSection = () => {
@@ -43,7 +44,7 @@ const ProductSection = () => {
 
       {/* Heading */}
       <h2 className="product-section-heading">
-        Our Products
+       Business Care Team
       </h2>
 
       {/* Products */}

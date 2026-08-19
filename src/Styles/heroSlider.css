@@ -3,7 +3,7 @@
   height: 520px;
   position: relative;
   overflow: hidden;
-  background: #111;
+  background: #fff;
 }
 
 /* Slides Container */
@@ -43,7 +43,7 @@
 
   display: block;
 
-  object-fit: cover;
+  object-fit: fill;
   object-position: center;
 }
 

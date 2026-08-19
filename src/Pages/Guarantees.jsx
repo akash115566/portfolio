@@ -3,27 +3,27 @@ import "../Styles/guarantees.css";
 
 const guarantees = [
   {
-    image: "/Home/no adul.webp",
+    image: "/Home/award/awa1.webp",
     title: "Quality Guaranteed",
   },
   {
-    image: "/Home/no preser.webp",
+    image: "/Home/award/awa2.webp",
     title: "100% Natural",
   },
   {
-    image: "/Home/no  added.webp",
+    image: "/Home/award/awa3.webp",
     title: "Fresh Products",
   },
   {
-    image: "/Home/no conta.webp",
+    image: "/Home/award/awa4.webp",
     title: "Secure Payment",
   },
   {
-    image: "/Home/no arti.webp",
+    image: "/Home/award/awa5.webp",
     title: "Fast Delivery",
   },
    {
-    image: "/Home/no path.webp",
+    image: "/Home/award/awa6.webp",
     title: "Fast Delivery",
   },
 ];
@@ -33,7 +33,7 @@ const Guarantees = () => {
     <section className="guarantees-section">
 
       <h2 className="guarantees-heading">
-        Guarantees
+       Our Award
       </h2>
 
       <div className="guarantees-grid">

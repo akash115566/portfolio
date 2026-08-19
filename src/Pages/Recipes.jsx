@@ -4,7 +4,7 @@ import "../Styles/recipes.css";
 
 const recipes = [
   {
-    image: "/Home/Fish-curry.webp",
+    image: "/Home/gallery/gallery1.webp",
     title: "Fish Curry",
     date: "APRIL 13, 2023",
     description:
@@ -12,7 +12,7 @@ const recipes = [
     link: "/recipes/fish-curry",
   },
   {
-    image: "/Home/pav-bhaji.webp",
+    image: "/Home/gallery/gallery2.webp",
     title: "Mumbai Style Pav Bhaji",
     date: "APRIL 13, 2023",
     description:
@@ -20,7 +20,15 @@ const recipes = [
     link: "/recipes/mumbai-style-pav-bhaji",
   },
   {
-    image: "/Home/pani-puri.webp",
+    image: "/Home/gallery/gellery3.webp",
+    title: "Pani Puri",
+    date: "APRIL 13, 2023",
+    description:
+      "(serves 4) Coriander 1 bunch Mint 1 bunch Green chilli 4pc Ginger ½ inch Black salt 1 tsp Chaat masala 1 tsp Pani puri masala 1 tsp Cold water 1...",
+    link: "/recipes/pani-puri",
+  },
+    {
+    image: "/Home/gallery/gellery4.webp",
     title: "Pani Puri",
     date: "APRIL 13, 2023",
     description:
@@ -35,7 +43,7 @@ const Recipes = () => {
 
       {/* Heading */}
       <h2 className="recipes-heading">
-        Recipes
+        Gellery
       </h2>
 
       {/* Recipe Cards */}
