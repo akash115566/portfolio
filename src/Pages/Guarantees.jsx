@@ -3,27 +3,27 @@ import "../Styles/guarantees.css";
 
 const guarantees = [
   {
-    image: "/Home/award/awa1.webp",
+    image: "/Home/news/navbharat.png",
     title: "Quality Guaranteed",
   },
   {
-    image: "/Home/award/awa2.webp",
+    image: "/Home/news/news-nation.jfif",
     title: "100% Natural",
   },
   {
-    image: "/Home/award/awa3.webp",
+    image: "/Home/news/times-now.webp",
     title: "Fresh Products",
   },
   {
-    image: "/Home/award/awa4.webp",
+    image: "/Home/news/zbarat.png",
     title: "Secure Payment",
   },
   {
-    image: "/Home/award/awa5.webp",
+    image: "/Home/news/zee-delhi.jfif",
     title: "Fast Delivery",
   },
    {
-    image: "/Home/award/awa6.webp",
+    image: "/Home/news/zee-news.jfif",
     title: "Fast Delivery",
   },
 ];
@@ -33,7 +33,7 @@ const Guarantees = () => {
     <section className="guarantees-section">
 
       <h2 className="guarantees-heading">
-       Our Award
+      Business Care – Now Telecasting Across India & Launching Soon in USA, UAE & Oman
       </h2>
 
       <div className="guarantees-grid">

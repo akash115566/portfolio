@@ -6,7 +6,7 @@
   width: 100%;
   padding: 65px 25px 55px;
 
-  background: #fff;
+  background: linear-gradient(135deg,#eba8a8,#84e1f8);
 
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
   font-size: 38px;
   font-weight: 400;
 
-  color: #111;
+  color: #127579;
 
   letter-spacing: 1px;
 }
@@ -138,7 +138,7 @@
 
   font-size: 10px;
 
-  color: #777;
+  color: #035d6f;
 
   letter-spacing: 1.5px;
 
@@ -155,7 +155,7 @@
 
   font-weight: 400;
 
-  color: #222;
+  color: #68b8cc;
 }
 
 
@@ -166,7 +166,7 @@
 
   font-size: 14px;
 
-  color: #222;
+  color: #68b8cc;
 }
 
 
@@ -257,7 +257,7 @@
   align-items: center;
   justify-content: center;
 
-  background: #c74743;
+  background: #111;
 
   color: #fff;
 

@@ -3,42 +3,42 @@ import "../Styles/testimonials.css";
 
 const testimonials = [
   {
-    image: "/Home/terst1.webp",
+    image: "/Home/award/awa1.webp",
     text: "I'm a huge fan of The Great Indian Spicery's spice collection. Their wide variety allows me to experiment with different flavors, making my meals exciting and full of zest!",
     rating: 5,
   },
   {
-    image: "/Home/test2.avif",
+    image: "/Home/award/awa2.webp",
     text: "Amazing quality and authentic Indian flavors. The spices have completely changed the way I cook at home.",
     rating: 5,
   },
   {
-    image: "/Home/test3.webp",
+    image: "/Home/award/awa3.webp",
     text: "The freshness and aroma of these spices are exceptional. Highly recommended for every Indian kitchen.",
     rating: 5,
   },
   {
-    image: "/Home/test4.webp",
+    image: "/Home/award/awa4.webp",
     text: "Beautiful packaging and excellent taste. Every product feels premium and authentic.",
     rating: 5,
   },
   {
-    image: "/Home/test5.webp",
+    image: "/Home/award/awa5.webp",
     text: "I absolutely love the quality of these spices. They add incredible flavor to every dish.",
     rating: 5,
   },
   {
-    image: "/Home/test6.webp",
+    image: "/Home/award/awa6.webp",
     text: "The perfect combination of traditional flavors and premium quality.",
     rating: 5,
   },
   {
-    image: "/Home/test7.webp",
+    image: "/Home/award/awa7.webp",
     text: "Great products with amazing flavor. These spices are now a regular part of my kitchen.",
     rating: 5,
   },
   {
-    image: "/Home/test8.webp",
+    image: "/Home/award/awa8.webp",
     text: "Authentic taste, wonderful aroma and excellent quality. Truly impressive.",
     rating: 5,
   },

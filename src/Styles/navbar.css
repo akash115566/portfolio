@@ -1,7 +1,18 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
 html,
 body,
 #root {
   width: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -10,25 +21,29 @@ body {
   overflow-x: hidden;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-    margin: 0;
-}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .navbar {
   width: 100%;
+  max-width: 100%;
   background: #f3e9d6;
   color: #111;
+  position: relative;
+  z-index: 1000;
 }
 
-/* =========================
-   TOP SLIDER
-========================= */
+
+/* =====================================================
+   TOP ANNOUNCEMENT SLIDER
+===================================================== */
 
 .top-slider {
-  height: 33px;
   width: 100%;
+  height: 33px;
+
   background: #278495;
 
   display: flex;
@@ -36,34 +51,63 @@ body {
   justify-content: center;
 
   position: relative;
-  color: #fff;
+
+  color: #ffffff;
+  overflow: hidden;
 }
 
+
+/* Announcement Text */
+
 .slider-text {
+  width: 100%;
+  padding: 0 80px;
+
+  text-align: center;
+
   font-size: 13px;
   font-weight: 400;
+
   letter-spacing: 0.3px;
-  text-align: center;
+
+  white-space: nowrap;
+
+  line-height: 33px;
 }
+
+
+/* Slider Arrows */
 
 .slider-arrow {
   position: absolute;
 
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 35px;
+  height: 30px;
+
   border: none;
+  outline: none;
+
   background: transparent;
-  color: #fff;
+
+  color: #ffffff;
 
   font-size: 27px;
   font-weight: 200;
 
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  top: 50%;
-  transform: translateY(-50%);
+  cursor: pointer;
 
   opacity: 0.75;
 
-  transition: 0.2s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .slider-arrow:hover {
@@ -71,18 +115,20 @@ body {
 }
 
 .left-arrow {
-  left: 55px;
+  left: 45px;
 }
 
 .right-arrow {
-  right: 55px;
+  right: 45px;
 }
 
-/* =========================
+
+/* =====================================================
    MAIN NAVBAR
-========================= */
+===================================================== */
 
 .navbar-main {
+  width: 100%;
   height: 115px;
 
   display: flex;
@@ -92,52 +138,81 @@ body {
   position: relative;
 
   padding: 0 50px;
+
+  background: #f3e9d6;
 }
 
-/* Left */
+
+/* =====================================================
+   LEFT SECTION - SEARCH
+===================================================== */
 
 .navbar-left {
-  width: 33.33%;
+  width: 33.333%;
+
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-/* Center */
+
+/* =====================================================
+   CENTER - LOGO
+===================================================== */
 
 .navbar-logo {
-  width: 33.33%;
+  width: 33.333%;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
 }
 
 .navbar-logo img {
   width: 92px;
   height: 92px;
 
+  display: block;
+
   object-fit: contain;
 
-  display: block;
+  transition: transform 0.3s ease;
 }
 
-/* Right */
+.navbar-logo img:hover {
+  transform: scale(1.03);
+}
+
+
+/* =====================================================
+   RIGHT SECTION
+===================================================== */
 
 .navbar-right {
-  width: 33.33%;
+  width: 33.333%;
 
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
 
   gap: 28px;
 }
 
-/* Icons */
+
+/* =====================================================
+   ICON LINKS
+===================================================== */
 
 .icon-link {
-  color: #111;
+  color: #111111;
 
   display: flex;
   align-items: center;
@@ -145,18 +220,69 @@ body {
 
   text-decoration: none;
 
-  transition: transform 0.2s ease;
+  line-height: 0;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .icon-link:hover {
   transform: scale(1.08);
+  opacity: 0.75;
 }
 
-/* =========================
-   MENU
-========================= */
+.icon-link svg {
+  display: block;
+}
+
+
+/* =====================================================
+   MOBILE MENU TOGGLE
+===================================================== */
+
+.menu-toggle {
+  display: none;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  line-height: 0;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.menu-toggle:hover {
+  opacity: 0.7;
+}
+
+.menu-toggle svg {
+  display: block;
+}
+
+
+/* =====================================================
+   DESKTOP NAVIGATION MENU
+===================================================== */
 
 .navbar-menu {
+  width: 100%;
   height: 54px;
 
   display: flex;
@@ -164,24 +290,38 @@ body {
   justify-content: center;
 
   gap: 45px;
+
+  background: #f3e9d6;
 }
+
+
+/* Menu Links */
 
 .navbar-menu a {
   position: relative;
 
-  text-decoration: none;
+  display: block;
 
-  color: #111;
+  padding: 7px 0;
+
+  color: #111111;
+
+  text-decoration: none;
 
   font-size: 12px;
   font-weight: 500;
 
   letter-spacing: 2px;
 
-  padding: 7px 0;
+  white-space: nowrap;
 
-  transition: 0.3s ease;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
+
+
+/* Underline */
 
 .navbar-menu a::after {
   content: "";
@@ -194,7 +334,7 @@ body {
   width: 0;
   height: 1px;
 
-  background: #111;
+  background: #111111;
 
   transition: width 0.3s ease;
 }
@@ -204,63 +344,180 @@ body {
   width: 100%;
 }
 
-/* =========================
-   TABLET
-========================= */
 
-@media (max-width: 900px) {
+/* =====================================================
+   LARGE DESKTOP
+   1200px+
+===================================================== */
+
+@media (min-width: 1200px) {
 
   .navbar-main {
-    padding: 0 30px;
+    padding-left: 55px;
+    padding-right: 55px;
   }
 
   .navbar-menu {
-    gap: 25px;
+    gap: 48px;
+  }
+
+}
+
+
+/* =====================================================
+   LAPTOP
+   1025px - 1199px
+===================================================== */
+
+@media (max-width: 1199px) {
+
+  .navbar-main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .navbar-menu {
+    gap: 35px;
   }
 
   .navbar-menu a {
     font-size: 11px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.7px;
   }
 
+}
+
+
+/* =====================================================
+   TABLET
+   769px - 1024px
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  /* Top Slider */
+
   .left-arrow {
-    left: 25px;
+    left: 20px;
   }
 
   .right-arrow {
-    right: 25px;
+    right: 20px;
   }
+
+
+  /* Main */
+
+  .navbar-main {
+    height: 105px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  /* Logo */
+
+  .navbar-logo img {
+    width: 82px;
+    height: 82px;
+  }
+
+
+  /* Icons */
+
+  .navbar-right {
+    gap: 22px;
+  }
+
+
+  /* Menu */
+
+  .navbar-menu {
+    height: 52px;
+
+    gap: 25px;
+  }
+
+  .navbar-menu a {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
 }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media (max-width: 600px) {
+/* =====================================================
+   MOBILE
+   768px AND BELOW
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* =========================================
+     TOP SLIDER
+  ========================================= */
 
   .top-slider {
     height: 35px;
   }
 
   .slider-text {
+    padding-left: 45px;
+    padding-right: 45px;
+
     font-size: 10px;
+
+    line-height: 35px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .slider-arrow {
-    font-size: 22px;
+    width: 30px;
+    height: 30px;
+
+    font-size: 23px;
   }
 
   .left-arrow {
-    left: 10px;
+    left: 8px;
   }
 
   .right-arrow {
-    right: 10px;
+    right: 8px;
   }
 
+
+  /* =========================================
+     MAIN NAVBAR
+  ========================================= */
+
   .navbar-main {
-    height: 95px;
-    padding: 0 18px;
+    width: 100%;
+    height: 90px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  /* =========================================
+     LEFT
+  ========================================= */
+
+  .navbar-left {
+    width: 33.333%;
+  }
+
+
+  /* =========================================
+     CENTER LOGO
+  ========================================= */
+
+  .navbar-logo {
+    width: 33.333%;
   }
 
   .navbar-logo img {
@@ -268,8 +525,25 @@ body {
     height: 70px;
   }
 
+
+  /* =========================================
+     RIGHT
+  ========================================= */
+
   .navbar-right {
-    gap: 15px;
+    width: 33.333%;
+
+    gap: 14px;
+  }
+
+
+  /* =========================================
+     ICON SIZE
+  ========================================= */
+
+  .navbar-left svg {
+    width: 22px;
+    height: 22px;
   }
 
   .navbar-right svg {
@@ -277,57 +551,398 @@ body {
     height: 21px;
   }
 
-  .navbar-left svg {
-    width: 22px;
-    height: 22px;
+
+  /* =========================================
+     SHOW TOGGLE
+  ========================================= */
+
+  .menu-toggle {
+    display: flex;
   }
+
+
+  /* =========================================
+     HIDE NORMAL MENU
+  ========================================= */
 
   .navbar-menu {
-    height: auto;
-
-    padding: 12px 15px 18px;
-
-    gap: 20px;
-
-    overflow-x: auto;
-    justify-content: flex-start;
-
-    white-space: nowrap;
-
-    scrollbar-width: none;
-  }
-
-  .navbar-menu::-webkit-scrollbar {
     display: none;
   }
 
-  .navbar-menu a {
-    font-size: 10px;
-    letter-spacing: 1.2px;
-    flex-shrink: 0;
+
+  /* =========================================
+     MOBILE MENU OPEN
+  ========================================= */
+
+  .navbar-menu.menu-open {
+    width: 100%;
+
+    height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 0;
+
+    padding: 5px 20px 20px;
+
+    background: #f3e9d6;
+
+    border-top: 1px solid rgba(17, 17, 17, 0.08);
+
+    animation: mobileMenu 0.25s ease forwards;
   }
+
+
+  /* Menu Animation */
+
+  @keyframes mobileMenu {
+
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  }
+
+
+  /* =========================================
+     MOBILE LINKS
+  ========================================= */
+
+  .navbar-menu.menu-open a {
+    width: 100%;
+
+    display: block;
+
+    text-align: center;
+
+    padding: 15px 10px;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 1.7px;
+
+    color: #111111;
+
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+
+  /* Remove desktop underline */
+
+  .navbar-menu.menu-open a::after {
+    display: none;
+  }
+
+
+  /* Hover */
+
+  .navbar-menu.menu-open a:hover {
+    color: #278495;
+  }
+
+
+  /* Active */
+
+  .navbar-menu.menu-open a.active {
+    color: #278495;
+  }
+
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
 
-@media (max-width: 400px) {
+/* =====================================================
+   MOBILE - 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+  /* Top */
+
+  .top-slider {
+    height: 34px;
+  }
+
+  .slider-text {
+    font-size: 9.5px;
+
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+
+  /* Main */
 
   .navbar-main {
-    padding: 0 12px;
+    height: 88px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  /* Logo */
+
+  .navbar-logo img {
+    width: 66px;
+    height: 66px;
+  }
+
+
+  /* Right Icons */
+
+  .navbar-right {
+    gap: 11px;
+  }
+
+
+  .navbar-left svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .navbar-right svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .menu-toggle {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  /* Mobile Menu */
+
+  .navbar-menu.menu-open {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+
+  .navbar-menu.menu-open a {
+    padding: 14px 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE - 480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+  /* Top Slider */
+
+  .top-slider {
+    height: 32px;
+  }
+
+  .slider-text {
+    font-size: 9px;
+
+    line-height: 32px;
+
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .slider-arrow {
+    font-size: 21px;
+  }
+
+  .left-arrow {
+    left: 5px;
+  }
+
+  .right-arrow {
+    right: 5px;
+  }
+
+
+  /* Main Navbar */
+
+  .navbar-main {
+    height: 82px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  /* Logo */
+
+  .navbar-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  /* Right */
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+
+  .navbar-left svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navbar-right svg {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  /* Toggle */
+
+  .menu-toggle {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  /* Menu */
+
+  .navbar-menu.menu-open {
+    padding: 3px 12px 12px;
+  }
+
+  .navbar-menu.menu-open a {
+    padding: 13px 5px;
+
+    font-size: 9.5px;
+
+    letter-spacing: 1.3px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE - 360px
+===================================================== */
+
+@media (max-width: 360px) {
+
+  /* Top */
+
+  .top-slider {
+    height: 31px;
+  }
+
+  .slider-text {
+    font-size: 8px;
+
+    line-height: 31px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  /* Main */
+
+  .navbar-main {
+    height: 78px;
+
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+
+  /* Logo */
+
+  .navbar-logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+
+  /* Left */
+
+  .navbar-left svg {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  /* Right */
+
+  .navbar-right {
+    gap: 6px;
+  }
+
+  .navbar-right svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* Toggle */
+
+  .menu-toggle {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  /* Menu */
+
+  .navbar-menu.menu-open {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 10px;
+  }
+
+  .navbar-menu.menu-open a {
+    padding: 12px 4px;
+
+    font-size: 8.5px;
+
+    letter-spacing: 1.1px;
+  }
+
+}
+
+
+/* =====================================================
+   LANDSCAPE MOBILE
+===================================================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+  .navbar-main {
+    height: 75px;
   }
 
   .navbar-logo img {
-    width: 62px;
-    height: 62px;
+    width: 58px;
+    height: 58px;
   }
 
-  .navbar-right {
-    gap: 10px;
+  .navbar-menu.menu-open a {
+    padding: 10px;
   }
 
-  .navbar-menu {
-    gap: 16px;
-  }
 }

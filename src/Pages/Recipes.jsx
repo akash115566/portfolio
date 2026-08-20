@@ -5,38 +5,40 @@ import "../Styles/recipes.css";
 const recipes = [
   {
     image: "/Home/gallery/gallery1.webp",
-    title: "Fish Curry",
+    title: "Celebrity Meet & Greeting",
     date: "APRIL 13, 2023",
     description:
-      "(serves 4) Fish washed & cleaned 500g Ginger garlic paste ½ tbsp Turmeric A pinch Coriander powder 2 tsp Red chilli powder ½ tsp Salt ½ tsp To saute &...",
-    link: "/recipes/fish-curry",
+      "A memorable celebrity interaction featuring a special meet and greeting, capturing moments of connection, recognition and celebration.",
+    link: "/recipes/celebrity-meet-greeting",
   },
+
   {
     image: "/Home/gallery/gallery2.webp",
-    title: "Mumbai Style Pav Bhaji",
+    title: "Celebrity Collaboration",
     date: "APRIL 13, 2023",
     description:
-      "(serves 4) Carrots 1 cup Onion chopped 1 cup Boiled potatoes 3 pc Peas ½ cup Cauliflower ½ cup Tomato 2 cup Ginger paste 2 tsp Garlic paste 2 tsp...",
-    link: "/recipes/mumbai-style-pav-bhaji",
+      "A special collaboration with a celebrity, showcasing memorable moments, professional networking and brand engagement.",
+    link: "/recipes/celebrity-collaboration",
   },
+
   {
     image: "/Home/gallery/gellery3.webp",
-    title: "Pani Puri",
+    title: "Brand Recognition Event",
     date: "APRIL 13, 2023",
     description:
-      "(serves 4) Coriander 1 bunch Mint 1 bunch Green chilli 4pc Ginger ½ inch Black salt 1 tsp Chaat masala 1 tsp Pani puri masala 1 tsp Cold water 1...",
-    link: "/recipes/pani-puri",
+      "A special brand recognition moment celebrating successful partnerships, achievements and meaningful business connections.",
+    link: "/recipes/brand-recognition-event",
   },
-    {
+
+  {
     image: "/Home/gallery/gellery4.webp",
-    title: "Pani Puri",
+    title: "Women Leadership & Partnership",
     date: "APRIL 13, 2023",
     description:
-      "(serves 4) Coriander 1 bunch Mint 1 bunch Green chilli 4pc Ginger ½ inch Black salt 1 tsp Chaat masala 1 tsp Pani puri masala 1 tsp Cold water 1...",
-    link: "/recipes/pani-puri",
+      "Celebrating women leadership, professional partnerships and inspiring moments that highlight confidence, success and collaboration.",
+    link: "/recipes/women-leadership-partnership",
   },
 ];
-
 const Recipes = () => {
   return (
     <section className="recipes-section">
