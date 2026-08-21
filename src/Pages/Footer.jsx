@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 import "../Styles/footer.css";
 
 const Footer = () => {
   return (
-   <>
-    {/* FOOTER */}
+    <>
+      {/* FOOTER */}
       <footer id="contact">
 
         <div className="footer-container">
 
+          {/* BRAND */}
           <div className="footer-brand">
 
             <h2>
@@ -29,30 +31,36 @@ const Footer = () => {
 
           </div>
 
+
+          {/* SHOP */}
           <div className="footer-column">
 
             <h3>SHOP</h3>
 
-            <a href="#products">All Spices</a>
-            <a href="#products">Masala Blends</a>
-            <a href="#products">Whole Spices</a>
-            <a href="#products">Herbs</a>
-            <a href="#products">Dry Fruits</a>
+            <Link to="/products">All Spices</Link>
+            <Link to="/masala-blends">Masala Blends</Link>
+            <Link to="/whole-spices">Whole Spices</Link>
+            <Link to="/herbs">Herbs</Link>
+            <Link to="/dry-fruits">Dry Fruits</Link>
 
           </div>
 
+
+          {/* HELP */}
           <div className="footer-column">
 
             <h3>HELP</h3>
 
-            <a href="#contact">Contact Us</a>
-            <a href="#contact">Shipping</a>
-            <a href="#contact">Returns</a>
-            <a href="#contact">FAQs</a>
-            <a href="#contact">Privacy Policy</a>
+            <Link to="/contact">Contact Us</Link>
+            <Link to="/shipping">Shipping</Link>
+            <Link to="/returns">Returns</Link>
+            <Link to="/faq">FAQs</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
 
           </div>
 
+
+          {/* CONTACT */}
           <div className="footer-column">
 
             <h3>CONTACT</h3>
@@ -66,14 +74,15 @@ const Footer = () => {
 
         </div>
 
+
+        {/* COPYRIGHT */}
         <div className="copyright">
           © 2026 SpiceCraft. All Rights Reserved.
         </div>
 
       </footer>
+    </>
+  );
+};
 
-   </>
-  )
-}
-
-export default Footer
+export default Footer;

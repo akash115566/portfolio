@@ -87,15 +87,15 @@ const Navbar = () => {
       {/* NAVBAR */}
       <nav className="navbar">
         <div className="nav-container">
-          <a href="#home">HOME</a>
-          <a href="#products">SPICES</a>
-          <a href="#categories">MASALA BLENDS</a>
-          <a href="#products">HERBS</a>
-          <a href="#categories">WHOLE SPICES</a>
-          <a href="#categories">DRY FRUITS</a>
-          <a href="#new">NEW ARRIVALS</a>
-          <a href="#offers">OFFERS</a>
-          <a href="#contact">CONTACT</a>
+          <Link to="/">HOME</Link>
+          <Link to="/about">SPICES</Link>
+          <Link to="/masala-blends">MASALA BLENDS</Link>
+          <Link to="/herbs">HERBS</Link>
+          <Link to="/whole-spices">WHOLE SPICES</Link>
+          <Link to="/dry-fruits">DRY FRUITS</Link>
+          <Link to="/new-arrivals">NEW ARRIVALS</Link>
+          <Link to="/offers">OFFERS</Link>
+          <Link to="/contact">CONTACT</Link>
         </div>
       </nav>
       </>

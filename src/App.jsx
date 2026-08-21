@@ -11,6 +11,7 @@ import Testimonials from "./Pages/Testimonials";
 import BackgroundSection from "./Pages/BackgroundSection";
 import Recipes from "./Pages/Recipes";
 import Footer from "./Pages/Footer";
+import AboutUs from "./Pages/AboutUs";
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/testimonals" element={<Testimonials />} />
           <Route path="/backgroundsection" element={<BackgroundSection />} />
           <Route path="/recipes" element={<Recipes />} />
+           <Route path="/about" element={<AboutUs />} />
 
                            
              
