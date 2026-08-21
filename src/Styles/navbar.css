@@ -22,927 +22,196 @@ body {
 }
 
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* =========================
+   TOP BAR
+========================= */
 
-.navbar {
-  width: 100%;
-  max-width: 100%;
-  background: #f3e9d6;
-  color: #111;
-  position: relative;
-  z-index: 1000;
-}
-
-
-/* =====================================================
-   TOP ANNOUNCEMENT SLIDER
-===================================================== */
-
-.top-slider {
-  width: 100%;
-  height: 33px;
-
-  background: #278495;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-
-  color: #ffffff;
-  overflow: hidden;
-}
-
-
-/* Announcement Text */
-
-.slider-text {
-  width: 100%;
-  padding: 0 80px;
-
-  text-align: center;
-
-  font-size: 13px;
-  font-weight: 400;
-
-  letter-spacing: 0.3px;
-
-  white-space: nowrap;
-
-  line-height: 33px;
-}
-
-
-/* Slider Arrows */
-
-.slider-arrow {
-  position: absolute;
-
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 35px;
-  height: 30px;
-
-  border: none;
-  outline: none;
-
-  background: transparent;
-
-  color: #ffffff;
-
-  font-size: 27px;
-  font-weight: 200;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-
-  opacity: 0.75;
-
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
-
-.slider-arrow:hover {
-  opacity: 1;
-}
-
-.left-arrow {
-  left: 45px;
-}
-
-.right-arrow {
-  right: 45px;
-}
-
-
-/* =====================================================
-   MAIN NAVBAR
-===================================================== */
-
-.navbar-main {
-  width: 100%;
-  height: 115px;
+.top-bar {
+  min-height: 38px;
+  padding: 8px 5%;
+  background: #d71920;
+  color: white;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  position: relative;
-
-  padding: 0 50px;
-
-  background: #f3e9d6;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
+.top-message {
+  text-transform: uppercase;
+}
 
-/* =====================================================
-   LEFT SECTION - SEARCH
-===================================================== */
+/* =========================
+   HEADER
+========================= */
 
-.navbar-left {
-  width: 33.333%;
+.header {
+  background: #fffdf5;
+  border-bottom: 1px solid #eee2ca;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: auto;
+  min-height: 105px;
+  padding: 15px 35px;
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 30px;
 }
 
+/* SEARCH */
 
-/* =====================================================
-   CENTER - LOGO
-===================================================== */
-
-.navbar-logo {
-  width: 33.333%;
+.search-box {
+  width: 310px;
+  height: 45px;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+
+  background: white;
 }
 
-.navbar-logo a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-}
-
-.navbar-logo img {
-  width: 92px;
-  height: 92px;
-
-  display: block;
-
-  object-fit: contain;
-
-  transition: transform 0.3s ease;
-}
-
-.navbar-logo img:hover {
-  transform: scale(1.03);
-}
-
-
-/* =====================================================
-   RIGHT SECTION
-===================================================== */
-
-.navbar-right {
-  width: 33.333%;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  gap: 28px;
-}
-
-
-/* =====================================================
-   ICON LINKS
-===================================================== */
-
-.icon-link {
-  color: #111111;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-
-  line-height: 0;
-
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
-}
-
-.icon-link:hover {
-  transform: scale(1.08);
-  opacity: 0.75;
-}
-
-.icon-link svg {
-  display: block;
-}
-
-
-/* =====================================================
-   MOBILE MENU TOGGLE
-===================================================== */
-
-.menu-toggle {
-  display: none;
-
-  width: 30px;
-  height: 30px;
-
-  padding: 0;
-
+.search-box input {
+  width: 100%;
   border: none;
   outline: none;
 
-  background: transparent;
+  padding: 0 15px;
+  font-size: 13px;
+}
 
-  color: #111111;
+.search-box button {
+  width: 55px;
+  border: none;
 
-  cursor: pointer;
+  background: #d71920;
+  color: white;
 
+  font-size: 18px;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 
-  line-height: 0;
-
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
+  text-align: center;
 }
 
-.menu-toggle:hover {
-  opacity: 0.7;
+.logo h1 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #c9161d;
+  letter-spacing: 2px;
 }
 
-.menu-toggle svg {
-  display: block;
+.logo h1 span {
+  color: #e89b00;
 }
 
+.logo p {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #4c7127;
+  font-weight: 700;
+}
 
-/* =====================================================
-   DESKTOP NAVIGATION MENU
-===================================================== */
+.logo-leaf {
+  font-size: 28px;
+}
 
-.navbar-menu {
-  width: 100%;
-  height: 54px;
+/* ACTIONS */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+
+  color: #333;
+}
+
+.header-action span {
+  font-size: 28px;
+}
+
+.header-action small {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background: #f5b900;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+  min-height: 48px;
+  max-width: 1400px;
+  margin: auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 45px;
 
-  background: #f3e9d6;
+  padding: 0 20px;
 }
 
+.nav-container a {
+  color: #211800;
+  font-size: 13px;
+  font-weight: 700;
 
-/* Menu Links */
-
-.navbar-menu a {
   position: relative;
-
-  display: block;
-
-  padding: 7px 0;
-
-  color: #111111;
-
-  text-decoration: none;
-
-  font-size: 12px;
-  font-weight: 500;
-
-  letter-spacing: 2px;
-
-  white-space: nowrap;
-
-  transition:
-    color 0.3s ease,
-    opacity 0.3s ease;
+  transition: 0.3s;
 }
 
-
-/* Underline */
-
-.navbar-menu a::after {
+.nav-container a::after {
   content: "";
 
   position: absolute;
-
   left: 0;
-  bottom: 0;
+  bottom: -8px;
 
   width: 0;
-  height: 1px;
+  height: 2px;
 
-  background: #111111;
+  background: #d71920;
 
-  transition: width 0.3s ease;
+  transition: 0.3s;
 }
 
-.navbar-menu a:hover::after,
-.navbar-menu a.active::after {
+.nav-container a:hover {
+  color: #d71920;
+}
+
+.nav-container a:hover::after {
   width: 100%;
-}
-
-
-/* =====================================================
-   LARGE DESKTOP
-   1200px+
-===================================================== */
-
-@media (min-width: 1200px) {
-
-  .navbar-main {
-    padding-left: 55px;
-    padding-right: 55px;
-  }
-
-  .navbar-menu {
-    gap: 48px;
-  }
-
-}
-
-
-/* =====================================================
-   LAPTOP
-   1025px - 1199px
-===================================================== */
-
-@media (max-width: 1199px) {
-
-  .navbar-main {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .navbar-menu {
-    gap: 35px;
-  }
-
-  .navbar-menu a {
-    font-size: 11px;
-    letter-spacing: 1.7px;
-  }
-
-}
-
-
-/* =====================================================
-   TABLET
-   769px - 1024px
-===================================================== */
-
-@media (max-width: 1024px) {
-
-  /* Top Slider */
-
-  .left-arrow {
-    left: 20px;
-  }
-
-  .right-arrow {
-    right: 20px;
-  }
-
-
-  /* Main */
-
-  .navbar-main {
-    height: 105px;
-
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-
-  /* Logo */
-
-  .navbar-logo img {
-    width: 82px;
-    height: 82px;
-  }
-
-
-  /* Icons */
-
-  .navbar-right {
-    gap: 22px;
-  }
-
-
-  /* Menu */
-
-  .navbar-menu {
-    height: 52px;
-
-    gap: 25px;
-  }
-
-  .navbar-menu a {
-    font-size: 10px;
-    letter-spacing: 1.4px;
-  }
-
-}
-
-
-/* =====================================================
-   MOBILE
-   768px AND BELOW
-===================================================== */
-
-@media (max-width: 768px) {
-
-  /* =========================================
-     TOP SLIDER
-  ========================================= */
-
-  .top-slider {
-    height: 35px;
-  }
-
-  .slider-text {
-    padding-left: 45px;
-    padding-right: 45px;
-
-    font-size: 10px;
-
-    line-height: 35px;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .slider-arrow {
-    width: 30px;
-    height: 30px;
-
-    font-size: 23px;
-  }
-
-  .left-arrow {
-    left: 8px;
-  }
-
-  .right-arrow {
-    right: 8px;
-  }
-
-
-  /* =========================================
-     MAIN NAVBAR
-  ========================================= */
-
-  .navbar-main {
-    width: 100%;
-    height: 90px;
-
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-
-  /* =========================================
-     LEFT
-  ========================================= */
-
-  .navbar-left {
-    width: 33.333%;
-  }
-
-
-  /* =========================================
-     CENTER LOGO
-  ========================================= */
-
-  .navbar-logo {
-    width: 33.333%;
-  }
-
-  .navbar-logo img {
-    width: 70px;
-    height: 70px;
-  }
-
-
-  /* =========================================
-     RIGHT
-  ========================================= */
-
-  .navbar-right {
-    width: 33.333%;
-
-    gap: 14px;
-  }
-
-
-  /* =========================================
-     ICON SIZE
-  ========================================= */
-
-  .navbar-left svg {
-    width: 22px;
-    height: 22px;
-  }
-
-  .navbar-right svg {
-    width: 21px;
-    height: 21px;
-  }
-
-
-  /* =========================================
-     SHOW TOGGLE
-  ========================================= */
-
-  .menu-toggle {
-    display: flex;
-  }
-
-
-  /* =========================================
-     HIDE NORMAL MENU
-  ========================================= */
-
-  .navbar-menu {
-    display: none;
-  }
-
-
-  /* =========================================
-     MOBILE MENU OPEN
-  ========================================= */
-
-  .navbar-menu.menu-open {
-    width: 100%;
-
-    height: auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: flex-start;
-
-    gap: 0;
-
-    padding: 5px 20px 20px;
-
-    background: #f3e9d6;
-
-    border-top: 1px solid rgba(17, 17, 17, 0.08);
-
-    animation: mobileMenu 0.25s ease forwards;
-  }
-
-
-  /* Menu Animation */
-
-  @keyframes mobileMenu {
-
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-  }
-
-
-  /* =========================================
-     MOBILE LINKS
-  ========================================= */
-
-  .navbar-menu.menu-open a {
-    width: 100%;
-
-    display: block;
-
-    text-align: center;
-
-    padding: 15px 10px;
-
-    font-size: 11px;
-
-    font-weight: 500;
-
-    letter-spacing: 1.7px;
-
-    color: #111111;
-
-    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
-  }
-
-
-  /* Remove desktop underline */
-
-  .navbar-menu.menu-open a::after {
-    display: none;
-  }
-
-
-  /* Hover */
-
-  .navbar-menu.menu-open a:hover {
-    color: #278495;
-  }
-
-
-  /* Active */
-
-  .navbar-menu.menu-open a.active {
-    color: #278495;
-  }
-
-}
-
-
-/* =====================================================
-   MOBILE - 600px
-===================================================== */
-
-@media (max-width: 600px) {
-
-  /* Top */
-
-  .top-slider {
-    height: 34px;
-  }
-
-  .slider-text {
-    font-size: 9.5px;
-
-    padding-left: 38px;
-    padding-right: 38px;
-  }
-
-
-  /* Main */
-
-  .navbar-main {
-    height: 88px;
-
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-
-  /* Logo */
-
-  .navbar-logo img {
-    width: 66px;
-    height: 66px;
-  }
-
-
-  /* Right Icons */
-
-  .navbar-right {
-    gap: 11px;
-  }
-
-
-  .navbar-left svg {
-    width: 21px;
-    height: 21px;
-  }
-
-  .navbar-right svg {
-    width: 20px;
-    height: 20px;
-  }
-
-
-  .menu-toggle {
-    width: 27px;
-    height: 27px;
-  }
-
-
-  /* Mobile Menu */
-
-  .navbar-menu.menu-open {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-  }
-
-  .navbar-menu.menu-open a {
-    padding: 14px 8px;
-
-    font-size: 10px;
-
-    letter-spacing: 1.5px;
-  }
-
-}
-
-
-/* =====================================================
-   SMALL MOBILE - 480px
-===================================================== */
-
-@media (max-width: 480px) {
-
-  /* Top Slider */
-
-  .top-slider {
-    height: 32px;
-  }
-
-  .slider-text {
-    font-size: 9px;
-
-    line-height: 32px;
-
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-
-  .slider-arrow {
-    font-size: 21px;
-  }
-
-  .left-arrow {
-    left: 5px;
-  }
-
-  .right-arrow {
-    right: 5px;
-  }
-
-
-  /* Main Navbar */
-
-  .navbar-main {
-    height: 82px;
-
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-
-  /* Logo */
-
-  .navbar-logo img {
-    width: 60px;
-    height: 60px;
-  }
-
-
-  /* Right */
-
-  .navbar-right {
-    gap: 8px;
-  }
-
-
-  .navbar-left svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .navbar-right svg {
-    width: 19px;
-    height: 19px;
-  }
-
-
-  /* Toggle */
-
-  .menu-toggle {
-    width: 25px;
-    height: 25px;
-  }
-
-
-  /* Menu */
-
-  .navbar-menu.menu-open {
-    padding: 3px 12px 12px;
-  }
-
-  .navbar-menu.menu-open a {
-    padding: 13px 5px;
-
-    font-size: 9.5px;
-
-    letter-spacing: 1.3px;
-  }
-
-}
-
-
-/* =====================================================
-   VERY SMALL MOBILE - 360px
-===================================================== */
-
-@media (max-width: 360px) {
-
-  /* Top */
-
-  .top-slider {
-    height: 31px;
-  }
-
-  .slider-text {
-    font-size: 8px;
-
-    line-height: 31px;
-
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-
-  /* Main */
-
-  .navbar-main {
-    height: 78px;
-
-    padding-left: 9px;
-    padding-right: 9px;
-  }
-
-
-  /* Logo */
-
-  .navbar-logo img {
-    width: 55px;
-    height: 55px;
-  }
-
-
-  /* Left */
-
-  .navbar-left svg {
-    width: 19px;
-    height: 19px;
-  }
-
-
-  /* Right */
-
-  .navbar-right {
-    gap: 6px;
-  }
-
-  .navbar-right svg {
-    width: 18px;
-    height: 18px;
-  }
-
-
-  /* Toggle */
-
-  .menu-toggle {
-    width: 23px;
-    height: 23px;
-  }
-
-
-  /* Menu */
-
-  .navbar-menu.menu-open {
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 10px;
-  }
-
-  .navbar-menu.menu-open a {
-    padding: 12px 4px;
-
-    font-size: 8.5px;
-
-    letter-spacing: 1.1px;
-  }
-
-}
-
-
-/* =====================================================
-   LANDSCAPE MOBILE
-===================================================== */
-
-@media (max-width: 768px) and (orientation: landscape) {
-
-  .navbar-main {
-    height: 75px;
-  }
-
-  .navbar-logo img {
-    width: 58px;
-    height: 58px;
-  }
-
-  .navbar-menu.menu-open a {
-    padding: 10px;
-  }
-
 }

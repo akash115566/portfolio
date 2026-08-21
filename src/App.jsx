@@ -10,6 +10,7 @@ import AboutSection from "./Pages/AboutSection";
 import Testimonials from "./Pages/Testimonials";
 import BackgroundSection from "./Pages/BackgroundSection";
 import Recipes from "./Pages/Recipes";
+import Footer from "./Pages/Footer";
 
 
 
@@ -33,7 +34,7 @@ const App = () => {
              
              
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 };

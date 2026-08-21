@@ -26,222 +26,79 @@ const Navbar = () => {
   };
 
   return (
-    <header className="navbar">
-
-      {/* ================= TOP ANNOUNCEMENT ================= */}
-      <div className="top-slider">
-
-        <button
-          className="slider-arrow left-arrow"
-          onClick={() =>
-            setCurrentMessage(
-              (currentMessage - 1 + messages.length) % messages.length
-            )
-          }
-        >
-          ‹
-        </button>
-
-        <div className="slider-text">
-          {messages[currentMessage]}
+    <>
+     {/* TOP BAR */}
+      <div className="top-bar">
+        <div>
+          🌿 100% PURE SPICES
         </div>
 
-        <button
-          className="slider-arrow right-arrow"
-          onClick={() =>
-            setCurrentMessage(
-              (currentMessage + 1) % messages.length
-            )
-          }
-        >
-          ›
-        </button>
+        <div className="top-message">
+          Premium Quality • Freshly Packed • Rich Flavour
+        </div>
 
+        <div>
+          🚚 Fast Delivery
+        </div>
       </div>
 
+      {/* HEADER */}
+      <header className="header">
 
-      {/* ================= MAIN NAVBAR ================= */}
-      <div className="navbar-main">
+        <div className="header-container">
 
-        {/* SEARCH */}
-        <div className="navbar-left">
-
-          <Link
-            to="/search"
-            className="icon-link"
-            aria-label="Search"
-          >
-            <svg
-              width="25"
-              height="25"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <circle cx="11" cy="11" r="7" />
-              <line
-                x1="16.5"
-                y1="16.5"
-                x2="22"
-                y2="22"
-              />
-            </svg>
-          </Link>
-
-        </div>
-
-
-        {/* CENTER LOGO */}
-        <div className="navbar-logo">
-
-          <Link to="/" onClick={closeMenu}>
-            <img
-              src="/Home/logo.jpeg"
-              alt="Logo"
+          {/* SEARCH */}
+          <div className="search-box">
+            <input
+              type="text"
+              placeholder="Search for spices, herbs & more..."
             />
-          </Link>
+            <button>🔍</button>
+          </div>
+
+          {/* LOGO */}
+          <div className="logo">
+            <span className="logo-leaf">🌿</span>
+
+            <div>
+              <h1>SPICE<span>CRAFT</span></h1>
+              <p>PURE • FRESH • AUTHENTIC</p>
+            </div>
+
+            <span className="logo-leaf">🌿</span>
+          </div>
+
+          {/* ACTIONS */}
+          <div className="header-actions">
+            <div className="header-action">
+              <span>♡</span>
+              <small>Wishlist</small>
+            </div>
+
+            <div className="header-action">
+              <span>🛒</span>
+              <small>Cart</small>
+            </div>
+          </div>
 
         </div>
+      </header>
 
-
-        {/* RIGHT ICONS */}
-        <div className="navbar-right">
-
-          {/* USER */}
-          <Link
-            to="/account"
-            className="icon-link"
-            aria-label="Account"
-            onClick={closeMenu}
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.4"
-            >
-              <circle cx="12" cy="8" r="4" />
-
-              <path
-                d="M4.5 21c.7-4.2 3.2-6.3 7.5-6.3s6.8 2.1 7.5 6.3"
-              />
-            </svg>
-          </Link>
-
-
-          {/* CART */}
-          <Link
-            to="/cart"
-            className="icon-link"
-            aria-label="Cart"
-            onClick={closeMenu}
-          >
-            <svg
-              width="25"
-              height="25"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.4"
-            >
-              <path
-                d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.5L21 8H6"
-              />
-
-              <circle cx="10" cy="20" r="1.2" />
-              <circle cx="18" cy="20" r="1.2" />
-            </svg>
-          </Link>
-
-
-          {/* ================= MOBILE TOGGLE ================= */}
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle Menu"
-          >
-
-            {menuOpen ? (
-              /* X ICON */
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <line x1="5" y1="5" x2="19" y2="19" />
-                <line x1="19" y1="5" x2="5" y2="19" />
-              </svg>
-            ) : (
-              /* HAMBURGER ICON */
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <line x1="4" y1="7" x2="20" y2="7" />
-                <line x1="4" y1="12" x2="20" y2="12" />
-                <line x1="4" y1="17" x2="20" y2="17" />
-              </svg>
-            )}
-
-          </button>
-
+      {/* NAVBAR */}
+      <nav className="navbar">
+        <div className="nav-container">
+          <a href="#home">HOME</a>
+          <a href="#products">SPICES</a>
+          <a href="#categories">MASALA BLENDS</a>
+          <a href="#products">HERBS</a>
+          <a href="#categories">WHOLE SPICES</a>
+          <a href="#categories">DRY FRUITS</a>
+          <a href="#new">NEW ARRIVALS</a>
+          <a href="#offers">OFFERS</a>
+          <a href="#contact">CONTACT</a>
         </div>
-
-      </div>
-
-
-      {/* ================= NAVIGATION MENU ================= */}
-      <nav className={`navbar-menu ${menuOpen ? "menu-open" : ""}`}>
-
-        <Link
-          to="/"
-          onClick={closeMenu}
-        >
-          Home
-        </Link>
-
-        <Link
-          to="/grounded-spices"
-          onClick={closeMenu}
-        >
-         About
-        </Link>
-
-        <Link
-          to="/blended-spices"
-          className="active"
-          onClick={closeMenu}
-        >
-          Service
-        </Link>
-
-        <Link
-          to="/recipes"
-          onClick={closeMenu}
-        >
-         Blog
-        </Link>
-
-        <Link
-          to="/contact"
-          onClick={closeMenu}
-        >
-          CONTACT
-        </Link>
-
       </nav>
-
-    </header>
+      </>
   );
 };
 
