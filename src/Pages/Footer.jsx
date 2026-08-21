@@ -66,8 +66,8 @@ const Footer = () => {
             <h3>CONTACT</h3>
 
             <p>📍 India</p>
-            <p>📞 +91 98765 43210</p>
-            <p>✉️ hello@spicecraft.com</p>
+            <p>📞 +91 8076151724</p>
+            <p>✉️ info@msmebusinesscare.com</p>
             <p>🕐 Mon - Sat: 9 AM - 6 PM</p>
 
           </div>
